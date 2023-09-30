@@ -7,4 +7,5 @@ FULL_HOSTNAME=$(curl -s "http://metadata.google.internal/computeMetadata/v1/inst
 PROJECT_NAME=$(echo "$FULL_HOSTNAME" | awk -F'.' '{print $(NF-1)}')
 
 # Output to inputs.yml
-echo "projectname: $PROJECT_NAME" > inputs.yml
+echo "project_id: $PROJECT_NAME" > inputs.yml
+echo "gce_hostname: $FULL_HOSTNAME" > inputs.yml
