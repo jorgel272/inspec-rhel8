@@ -1,5 +1,5 @@
 # Read inspec.yml to get the profile version
-profile_data = yaml(content: inspec.profile.file('/./inspec.yml').content)
+profile_data = yaml(content: inspec.profile.file('inspec.yml').content)
 profile_version = profile_data.params['version']
 
 control "RHEL8 Check SSH_MaxSessions_is_set_to_4_or_less" do
