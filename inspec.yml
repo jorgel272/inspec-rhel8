@@ -1,6 +1,7 @@
 name: scc-inspec-profile
 title: Google Cloud Security Command Center Inspec Profile
 maintainer: info@jorgeliauw.nl
+version: 1.0.0
 
 inputs:
   - name: projectname
