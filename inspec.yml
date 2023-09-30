@@ -1,4 +1,4 @@
-name: "InSpec testing profile"
+name: "InSpec profile for SCC"
 
 supports:
   - platform: gcp
@@ -12,8 +12,3 @@ inputs:
   required: true
   description: 'The Google Cloud project identifier.'
   type: String
-- name: bucket_ignore_pattern
-  required: false
-  description: 'Buckets matching this pattern will not be validated'
-  type: Regexp
-  value: appspot.com$|_cloudbuild$
