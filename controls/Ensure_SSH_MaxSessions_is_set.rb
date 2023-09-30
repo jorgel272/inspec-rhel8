@@ -4,6 +4,7 @@ control "RHEL8 Check SSH_MaxSessions_is_set_to_4_or_less" do
   impact 'high'
   tag scc_category: 'OPEN_SSH_PORT'
   tag resource_type: 'compute.Network'
+  tag findingClass: 'MISCONFIGURATION'
 
   describe sshd_config do
     its('MaxSessions') { should cmp <= 4 }
