@@ -1,3 +1,7 @@
+title 'Ensure that SSH Max Sessions is configured to policy'
+
+project_id = input('project_id')
+
 control "RHEL8 Check SSH_MaxSessions_is_set_to_4_or_less" do
   title "RHEL8 Check SSH_MaxSessions_is_set_to_4_or_less"
   desc  "Protect against DDoS by opening a large amount of SSH sessions"
