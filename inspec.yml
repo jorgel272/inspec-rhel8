@@ -3,12 +3,12 @@ name: "InSpec profile for SCC"
 supports:
   - platform: gcp
 
-depends:
-  - name: inspec-gcp-helpers
-    url: https://github.com/GoogleCloudPlatform/inspec-gcp-helpers/archive/v1.0.7.tar.gz
+#depends:
+#  - name: inspec-gcp-helpers
+#    url: https://github.com/GoogleCloudPlatform/inspec-gcp-helpers/archive/v1.0.7.tar.gz
 
-inputs:
-- name: project_id
-  required: true
-  description: 'The Google Cloud project identifier.'
-  type: String
+#inputs:
+#- name: project_id
+#  required: true
+#  description: 'The Google Cloud project identifier.'
+#  type: String
