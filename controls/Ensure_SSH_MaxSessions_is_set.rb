@@ -1,10 +1,3 @@
-# Read the inspec.yml file
-inspec_yml_path = File.join(inspec.profile.path, 'inspec.yml')
-profile_data = YAML.load(File.read(inspec_yml_path))
-
-# Get the profile version
-profile_version = profile_data['version']
-
 control "RHEL8 Check SSH_MaxSessions_is_set_to_4_or_less" do
   title "RHEL8 Check SSH_MaxSessions_is_set_to_4_or_less"
   desc  "Protect against DDoS by opening a large amount of SSH sessions"
