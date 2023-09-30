@@ -4,7 +4,12 @@ version: 1.0.0
 maintainer: info@jorgeliauw.nl
 
 inputs:
-  - name: projectname
-    description: Name of the GCP Project
-    type: string
-    value: default_project_name
+- name: project_id
+  required: true
+  description: 'The Google Cloud project identifier.'
+  type: String
+
+- name: gce_hostname
+  required: true
+  description: 'The hostname of Compute Engine Instance.'
+  type: String
