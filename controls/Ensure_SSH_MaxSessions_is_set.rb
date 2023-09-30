@@ -6,16 +6,6 @@ control "RHEL8 Check SSH_MaxSessions_is_set_to_4_or_less" do
   tag resource_type: 'compute.Network'
   tag findingClass: 'MISCONFIGURATION'
 
-  # Fetching the projectname input
-  project = input('projectname')
-
-  # Example of how you might utilize the project input
-  # (Here, I'm just printing the project name to the console)
-  describe "The GCP project being examined" do
-    subject { project }
-    it { should_not be_empty }
-  end
-
   describe sshd_config do
     its('MaxSessions') { should cmp <= 4 }
     its('MaxSessions') { should cmp > 0 }
