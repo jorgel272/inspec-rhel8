@@ -1,14 +1,10 @@
-name: "InSpec profile for SCC"
+name: scc-inspec-profile
+title: Google Cloud Security Command Center Inspec Profile
+maintainer: info@jorgeliauw.nl
+version: 1.0.0
 
-supports:
-  - platform: gcp
-
-#depends:
-#  - name: inspec-gcp-helpers
-#    url: https://github.com/GoogleCloudPlatform/inspec-gcp-helpers/archive/v1.0.7.tar.gz
-
-#inputs:
-#- name: project_id
-#  required: true
-#  description: 'The Google Cloud project identifier.'
-#  type: String
+inputs:
+  - name: projectname
+    description: Name of the GCP Project
+    type: string
+    value: default_project_name
